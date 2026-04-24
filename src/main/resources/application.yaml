@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Rate-Limiting
+
+server:
+  port: 8090
