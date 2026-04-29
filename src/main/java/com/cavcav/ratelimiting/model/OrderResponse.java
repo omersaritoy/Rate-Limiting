@@ -1,6 +1,8 @@
 package com.cavcav.ratelimiting.model;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Response DTO for order placement API
  * Represents the response structure for /api/place-order endpoint
