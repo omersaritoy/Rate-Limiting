@@ -1,6 +1,7 @@
 spring:
   application:
     name: Rate-Limiting
-
+  Jackson:
+    default-property-inclusion: non_null
 server:
   port: 8090
