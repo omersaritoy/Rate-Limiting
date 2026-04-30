@@ -1,20 +1,26 @@
 # 🚦 Rate Limiting Project (Spring Boot + Bucket4j)
 
-This project demonstrates **rate limiting** in a Spring Boot application using **Bucket4j**, including both:
+This project demonstrates **rate limiting** in a Spring Boot application using **Bucket4j**, including:
 
-- ✅ **Per-user rate limiting**
-- ✅ **Global system rate limiting**
-- ✅ **IP-based rate limiting**
-- ✅ (Optional) **Redis-based distributed rate limiting**
+- ✅ Per-user rate limiting  
+- ✅ Global system rate limiting  
+- ✅ IP-based rate limiting  
+- ✅ Optional Redis-based distributed rate limiting  
 
 ---
 
 ## 📦 Tech Stack
 
-- Java 25
-- Spring Boot 4.x
-- Bucket4j 8.10.1
-- Maven## ⚙️ Rate Limiting Strategies
+- Java 25  
+- Spring Boot 4.x  
+- Bucket4j 8.10.1  
+- Maven  
+- Docker  
+- GitHub Actions (CI/CD)
+
+---
+
+## ⚙️ Rate Limiting Strategies
 
 ### 🍕 1. Order Placement (`/api/place-order`)
 
@@ -26,8 +32,8 @@ Dual-layer protection:
 | Per User  | 5 requests / minute |
 
 📌 Purpose:
-- Prevent system overload
-- Prevent user spam
+- Prevent system overload  
+- Prevent user spam  
 
 ---
 
@@ -38,7 +44,7 @@ Dual-layer protection:
 | Global    | 3 requests / minute |
 
 📌 Purpose:
-- Protect against brute-force / abuse attacks
+- Protect against brute-force / abuse attacks  
 
 ---
 
@@ -49,16 +55,17 @@ Dual-layer protection:
 | Per IP    | Configurable (via `RateLimitService`) |
 
 📌 Purpose:
-- Prevent abuse from specific IP addresses
+- Prevent abuse from specific IP addresses  
 
 ---
 
 ## 🚀 API Endpoints
 
-### 🍕 Place OrderPOST /api/place-order
+### 🍕 Place Order
 
+**POST** `/api/place-order`
 
-#### Parameters:
+#### Parameters
 
 | Name         | Type   | Required |
 |--------------|--------|----------|
